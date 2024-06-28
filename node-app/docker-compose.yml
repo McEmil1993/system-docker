@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+ 
+  main-server:
+    container_name: 'main-server'
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./lib:/usr/src/lib
+      - ./main-server:/usr/src/main-server
+      - /usr/src/main-server/node_modules
+    ports:
+      # - "192.168.5.2:86:9091"
+      - "9091:9091"
+    environment:
+      TZ: Asia/Seoul
+
+     

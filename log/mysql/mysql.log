@@ -1,0 +1,1077 @@
+mariadbd, Version: 10.6.18-MariaDB-ubu2004-log (mariadb.org binary distribution). started with:
+Tcp port: 3306  Unix socket: /run/mysqld/mysqld.sock
+Time		    Id Command	Argument
+240628 15:58:45	     3 Connect	manager@192.168.100.123 on  using TCP/IP
+		     3 Query	SELECT CONNECTION_ID()
+		     3 Query	SHOW VARIABLES
+		     3 Query	SHOW /*!50002 GLOBAL */ STATUS
+		     3 Query	SELECT NOW()
+		     3 Query	SHOW TABLES FROM `information_schema`
+		     3 Query	SHOW DATABASES
+240628 15:58:46	     3 Query	USE `main`
+		     3 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='main'
+		     3 Query	SHOW TABLE STATUS FROM `main`
+		     3 Query	SHOW FUNCTION STATUS WHERE `Db`='main'
+		     3 Query	SHOW PROCEDURE STATUS WHERE `Db`='main'
+		     3 Query	SHOW TRIGGERS FROM `main`
+		     3 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='main'
+240628 16:05:06	     4 Connect	manager@172.19.0.1 on main using TCP/IP
+		     5 Connect	manager@172.19.0.1 on main using TCP/IP
+		     7 Connect	manager@172.19.0.1 on main using TCP/IP
+		     6 Connect	manager@172.19.0.1 on main using TCP/IP
+		     9 Connect	manager@172.19.0.1 on main using TCP/IP
+		     8 Connect	manager@172.19.0.1 on main using TCP/IP
+		     4 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     5 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     7 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     6 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     9 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     4 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     5 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     7 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     9 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     6 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     8 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     8 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		     6 Prepare	SELECT * FROM `main`.`lsports_sports`
+		     6 Execute	SELECT * FROM `main`.`lsports_sports`
+		     6 Prepare	SELECT * FROM `main`.`lsports_locations`
+		     6 Execute	SELECT * FROM `main`.`lsports_locations`
+		     6 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		     6 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:05:12	     6 Prepare	SELECT * FROM `main`.`lsports_participant`
+		     6 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:05:13	     6 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+		     6 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+		     6 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		     6 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		     6 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		     6 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		     6 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		     6 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		     6 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		     6 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		     6 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		     6 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		     6 Prepare	SELECT * FROM static_dividen_combination
+		     6 Execute	SELECT * FROM static_dividen_combination
+		     6 Prepare	SELECT * FROM static_inplay_check_time_score
+		     6 Execute	SELECT * FROM static_inplay_check_time_score
+		     6 Prepare	SELECT * FROM static_game_betting_type_mgr
+		     6 Execute	SELECT * FROM static_game_betting_type_mgr
+		     6 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		     6 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		     6 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		     6 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		     6 Prepare	SELECT * FROM static_market_family
+		     6 Execute	SELECT * FROM static_market_family
+		     6 Prepare	SELECT * FROM static_partner_front_rule_set
+		     6 Execute	SELECT * FROM static_partner_front_rule_set
+		     6 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		     6 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		     6 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		     6 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		     6 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		     6 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:06:00	     6 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:07:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:08:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:09:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:10:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:11:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:12:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:13:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:14:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:15:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:16:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:17:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:18:00	     6 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:18:59	    10 Connect	manager@172.19.0.1 on main using TCP/IP
+		    11 Connect	manager@172.19.0.1 on main using TCP/IP
+		    12 Connect	manager@172.19.0.1 on main using TCP/IP
+		    13 Connect	manager@172.19.0.1 on main using TCP/IP
+		    14 Connect	manager@172.19.0.1 on main using TCP/IP
+		    15 Connect	manager@172.19.0.1 on main using TCP/IP
+		    10 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    11 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    12 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    13 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    14 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    10 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    11 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    12 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    13 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    15 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    15 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    14 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    13 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    13 Execute	SELECT * FROM `main`.`lsports_sports`
+		    13 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    13 Execute	SELECT * FROM `main`.`lsports_locations`
+		    13 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    13 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:19:01	    15 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+240628 16:19:02	    15 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:19:05	    13 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:19:06	    13 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:19:08	    13 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:19:09	    13 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:19:10	    13 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    13 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    13 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    13 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    13 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    13 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    13 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    13 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    13 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    13 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    13 Prepare	SELECT * FROM static_dividen_combination
+		    13 Execute	SELECT * FROM static_dividen_combination
+		    13 Prepare	SELECT * FROM static_inplay_check_time_score
+		    13 Execute	SELECT * FROM static_inplay_check_time_score
+		    13 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    13 Execute	SELECT * FROM static_game_betting_type_mgr
+		    13 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    13 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    13 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    13 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    13 Prepare	SELECT * FROM static_market_family
+		    13 Execute	SELECT * FROM static_market_family
+		    13 Prepare	SELECT * FROM static_partner_front_rule_set
+		    13 Execute	SELECT * FROM static_partner_front_rule_set
+		    13 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    13 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    13 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    13 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    13 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    13 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:20:00	    13 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    13 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:20:50	    16 Connect	manager@172.19.0.1 on main using TCP/IP
+		    17 Connect	manager@172.19.0.1 on main using TCP/IP
+		    18 Connect	manager@172.19.0.1 on main using TCP/IP
+		    19 Connect	manager@172.19.0.1 on main using TCP/IP
+		    20 Connect	manager@172.19.0.1 on main using TCP/IP
+		    21 Connect	manager@172.19.0.1 on main using TCP/IP
+		    16 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    17 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    18 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    19 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    20 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    16 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    17 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    18 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    19 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    21 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    21 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    20 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    19 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    19 Execute	SELECT * FROM `main`.`lsports_sports`
+		    19 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    19 Execute	SELECT * FROM `main`.`lsports_locations`
+		    19 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    19 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:20:55	    19 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:20:56	    19 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:20:57	    19 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+		    19 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+		    19 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    19 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    19 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    19 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    19 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    19 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    19 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    19 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    19 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    19 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    19 Prepare	SELECT * FROM static_dividen_combination
+		    19 Execute	SELECT * FROM static_dividen_combination
+		    19 Prepare	SELECT * FROM static_inplay_check_time_score
+		    19 Execute	SELECT * FROM static_inplay_check_time_score
+		    19 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    19 Execute	SELECT * FROM static_game_betting_type_mgr
+		    19 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    19 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    19 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    19 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    19 Prepare	SELECT * FROM static_market_family
+		    19 Execute	SELECT * FROM static_market_family
+		    19 Prepare	SELECT * FROM static_partner_front_rule_set
+		    19 Execute	SELECT * FROM static_partner_front_rule_set
+		    19 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    19 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    19 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    19 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    19 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    19 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:21:00	    19 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:21:52	     3 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='main' AND TABLE_NAME='member_domain' ORDER BY ORDINAL_POSITION
+		     3 Query	SHOW INDEXES FROM `member_domain` FROM `main`
+		     3 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='main'   AND TABLE_NAME='member_domain'   AND REFERENCED_TABLE_NAME IS NOT NULL
+		     3 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='main'   AND TABLE_NAME='member_domain'   AND REFERENCED_TABLE_NAME IS NOT NULL
+		     3 Query	SHOW ENGINES
+		     3 Query	SHOW COLLATION
+		     3 Query	SHOW CREATE TABLE `main`.`member_domain`
+		     3 Query	SELECT CONSTRAINT_NAME, CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` WHERE CONSTRAINT_SCHEMA='main' AND TABLE_NAME='member_domain'
+240628 16:21:54	     3 Query	SELECT * FROM `main`.`member_domain` LIMIT 1000
+240628 16:21:59	     3 Query	UPDATE `main`.`member_domain` SET `domain`='192.168.100.144:85' WHERE  `partner_idx`=2
+		     3 Query	SELECT `partner_idx`, `domain`, `update_dt`, `create_dt` FROM `main`.`member_domain` WHERE  `partner_idx`=2
+240628 16:22:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:23:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:24:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:25:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:25:26	    19 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%undefined%'
+		    19 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%undefined%'
+240628 16:26:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:27:01	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:28:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:29:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:30:00	    19 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:30:25	    22 Connect	manager@172.19.0.1 on main using TCP/IP
+		    23 Connect	manager@172.19.0.1 on main using TCP/IP
+		    24 Connect	manager@172.19.0.1 on main using TCP/IP
+		    25 Connect	manager@172.19.0.1 on main using TCP/IP
+		    26 Connect	manager@172.19.0.1 on main using TCP/IP
+		    27 Connect	manager@172.19.0.1 on main using TCP/IP
+		    22 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    23 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    24 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    25 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    26 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    22 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    23 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    24 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    25 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    26 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    27 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    27 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    27 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    27 Execute	SELECT * FROM `main`.`lsports_sports`
+		    27 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    27 Execute	SELECT * FROM `main`.`lsports_locations`
+		    27 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    27 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:30:32	    27 Prepare	SELECT * FROM `main`.`lsports_participant`
+		    27 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:30:33	    27 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+		    27 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+		    27 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    27 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    27 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    27 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    27 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    27 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    27 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    27 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    27 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    27 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    27 Prepare	SELECT * FROM static_dividen_combination
+		    27 Execute	SELECT * FROM static_dividen_combination
+		    27 Prepare	SELECT * FROM static_inplay_check_time_score
+		    27 Execute	SELECT * FROM static_inplay_check_time_score
+		    27 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    27 Execute	SELECT * FROM static_game_betting_type_mgr
+		    27 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    27 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    27 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    27 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    27 Prepare	SELECT * FROM static_market_family
+		    27 Execute	SELECT * FROM static_market_family
+		    27 Prepare	SELECT * FROM static_partner_front_rule_set
+		    27 Execute	SELECT * FROM static_partner_front_rule_set
+		    27 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    27 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    27 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    27 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    27 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    27 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:30:35	    27 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%undefined%'
+		    27 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%undefined%'
+240628 16:30:45	    28 Connect	manager@172.19.0.1 on main using TCP/IP
+		    32 Connect	manager@172.19.0.1 on main using TCP/IP
+		    29 Connect	manager@172.19.0.1 on main using TCP/IP
+		    30 Connect	manager@172.19.0.1 on main using TCP/IP
+		    31 Connect	manager@172.19.0.1 on main using TCP/IP
+		    33 Connect	manager@172.19.0.1 on main using TCP/IP
+		    28 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    32 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    29 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    30 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    31 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    28 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    32 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    29 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    30 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    33 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    31 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    33 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    30 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    30 Execute	SELECT * FROM `main`.`lsports_sports`
+		    30 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    30 Execute	SELECT * FROM `main`.`lsports_locations`
+		    30 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    30 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:30:46	    30 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:30:47	    30 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:30:48	    30 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+		    30 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+		    30 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    30 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    30 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    30 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    30 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    30 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    30 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    30 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    30 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    30 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    30 Prepare	SELECT * FROM static_dividen_combination
+		    30 Execute	SELECT * FROM static_dividen_combination
+		    30 Prepare	SELECT * FROM static_inplay_check_time_score
+		    30 Execute	SELECT * FROM static_inplay_check_time_score
+		    30 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    30 Execute	SELECT * FROM static_game_betting_type_mgr
+		    30 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    30 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    30 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    30 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    30 Prepare	SELECT * FROM static_market_family
+		    30 Execute	SELECT * FROM static_market_family
+		    30 Prepare	SELECT * FROM static_partner_front_rule_set
+		    30 Execute	SELECT * FROM static_partner_front_rule_set
+		    30 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    30 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    30 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    30 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    30 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    30 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:31:00	    30 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    30 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:31:02	    34 Connect	manager@172.19.0.1 on main using TCP/IP
+		    35 Connect	manager@172.19.0.1 on main using TCP/IP
+		    36 Connect	manager@172.19.0.1 on main using TCP/IP
+		    37 Connect	manager@172.19.0.1 on main using TCP/IP
+		    39 Connect	manager@172.19.0.1 on main using TCP/IP
+		    38 Connect	manager@172.19.0.1 on main using TCP/IP
+		    34 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    35 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    36 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    37 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    39 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    38 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    34 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    35 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    36 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    37 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    39 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    38 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    37 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    37 Execute	SELECT * FROM `main`.`lsports_sports`
+		    37 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    37 Execute	SELECT * FROM `main`.`lsports_locations`
+		    37 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    37 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:31:07	    37 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:31:08	    37 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:31:10	    37 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:31:11	    37 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:31:12	    37 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    37 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    37 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    37 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    37 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    37 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    37 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    37 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    37 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    37 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    37 Prepare	SELECT * FROM static_dividen_combination
+		    37 Execute	SELECT * FROM static_dividen_combination
+		    37 Prepare	SELECT * FROM static_inplay_check_time_score
+		    37 Execute	SELECT * FROM static_inplay_check_time_score
+		    37 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    37 Execute	SELECT * FROM static_game_betting_type_mgr
+		    37 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    37 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    37 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    37 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    37 Prepare	SELECT * FROM static_market_family
+		    37 Execute	SELECT * FROM static_market_family
+		    37 Prepare	SELECT * FROM static_partner_front_rule_set
+		    37 Execute	SELECT * FROM static_partner_front_rule_set
+240628 16:31:13	    37 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    37 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    37 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    37 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    37 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    37 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:31:15	    37 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    37 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    37 Prepare	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = ?  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = ?
+		    37 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+240628 16:31:16	    37 Prepare	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = ?
+240628 16:31:17	    37 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    37 Prepare	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = ?
+		    37 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    37 Prepare	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    37 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    37 Prepare	SELECT * FROM member_minigame_betting_info WHERE member_idx = ? ORDER BY create_dt DESC
+		    37 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 ORDER BY create_dt DESC
+		    37 Prepare	update member set last_login = now() where idx = ?
+		    37 Execute	update member set last_login = now() where idx = '38'
+240628 16:32:00	    37 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    37 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:33:00	    37 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:34:00	    37 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:34:11	    37 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    37 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+		    37 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    37 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    37 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    37 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 ORDER BY create_dt DESC
+		    37 Execute	update member set last_login = now() where idx = '38'
+240628 16:34:37	    40 Connect	manager@172.19.0.1 on main using TCP/IP
+		    41 Connect	manager@172.19.0.1 on main using TCP/IP
+		    42 Connect	manager@172.19.0.1 on main using TCP/IP
+		    43 Connect	manager@172.19.0.1 on main using TCP/IP
+		    44 Connect	manager@172.19.0.1 on main using TCP/IP
+		    45 Connect	manager@172.19.0.1 on main using TCP/IP
+		    40 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    41 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    42 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    43 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    44 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    40 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    41 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    42 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    43 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    45 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    44 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    45 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    45 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    45 Execute	SELECT * FROM `main`.`lsports_sports`
+		    45 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    45 Execute	SELECT * FROM `main`.`lsports_locations`
+		    45 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    45 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:34:43	    45 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:34:44	    45 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:34:46	    45 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+		    45 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+		    45 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    45 Execute	SELECT * FROM `main`.`lsports_static_markets`
+240628 16:34:47	    45 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    45 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    45 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    45 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    45 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    45 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    45 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    45 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    45 Prepare	SELECT * FROM static_dividen_combination
+		    45 Execute	SELECT * FROM static_dividen_combination
+		    45 Prepare	SELECT * FROM static_inplay_check_time_score
+		    45 Execute	SELECT * FROM static_inplay_check_time_score
+		    45 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    45 Execute	SELECT * FROM static_game_betting_type_mgr
+		    45 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    45 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    45 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    45 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    45 Prepare	SELECT * FROM static_market_family
+		    45 Execute	SELECT * FROM static_market_family
+		    45 Prepare	SELECT * FROM static_partner_front_rule_set
+		    45 Execute	SELECT * FROM static_partner_front_rule_set
+		    45 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    45 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    45 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    45 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    45 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    45 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:34:48	    45 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    45 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    45 Prepare	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = ?  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = ?
+		    45 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+240628 16:34:49	    45 Prepare	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = ?
+240628 16:34:50	    45 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    45 Prepare	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = ?
+		    45 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    45 Prepare	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    45 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    45 Prepare	SELECT * FROM member_minigame_betting_info WHERE member_idx = ? ORDER BY create_dt DESC
+		    45 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 ORDER BY create_dt DESC
+		    45 Prepare	update member set last_login = now() where idx = ?
+		    45 Execute	update member set last_login = now() where idx = '38'
+240628 16:35:01	    45 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    45 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:36:00	    45 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:37:00	    45 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:38:00	    45 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:39:00	    45 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:39:09	    46 Connect	manager@172.19.0.1 on main using TCP/IP
+		    47 Connect	manager@172.19.0.1 on main using TCP/IP
+		    49 Connect	manager@172.19.0.1 on main using TCP/IP
+		    48 Connect	manager@172.19.0.1 on main using TCP/IP
+		    51 Connect	manager@172.19.0.1 on main using TCP/IP
+		    50 Connect	manager@172.19.0.1 on main using TCP/IP
+		    46 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    47 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    49 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    48 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    51 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    46 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    47 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    49 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    48 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    50 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    51 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    50 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    48 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    48 Execute	SELECT * FROM `main`.`lsports_sports`
+		    48 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    48 Execute	SELECT * FROM `main`.`lsports_locations`
+		    48 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    48 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:43:21	    52 Connect	manager@172.19.0.1 on main using TCP/IP
+		    52 Prepare	SELECT * FROM static_product_id_manager
+		    52 Execute	SELECT * FROM static_product_id_manager
+		    52 Prepare	SELECT * FROM static_game_id_manager
+		    52 Execute	SELECT * FROM static_game_id_manager
+		    52 Prepare	SELECT * FROM static_product_group_manager
+		    52 Execute	SELECT * FROM static_product_group_manager
+		    52 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    52 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    54 Connect	manager@172.19.0.1 on main using TCP/IP
+		    55 Connect	manager@172.19.0.1 on main using TCP/IP
+		    53 Connect	manager@172.19.0.1 on main using TCP/IP
+		    57 Connect	manager@172.19.0.1 on main using TCP/IP
+		    56 Connect	manager@172.19.0.1 on main using TCP/IP
+		    54 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    55 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    57 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    53 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    54 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    55 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    53 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    57 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    56 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    56 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+240628 16:43:22	    56 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    56 Execute	SELECT * FROM `main`.`lsports_sports`
+		    56 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    56 Execute	SELECT * FROM `main`.`lsports_locations`
+		    56 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    56 Execute	SELECT * FROM `main`.`lsports_leagues`
+		    56 Prepare	SELECT * FROM `main`.`lsports_participant`
+		    56 Execute	SELECT * FROM `main`.`lsports_participant`
+		    56 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+		    56 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+		    56 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    56 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    56 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    56 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    56 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    56 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    56 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    56 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    56 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    56 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    56 Prepare	SELECT * FROM static_dividen_combination
+		    56 Execute	SELECT * FROM static_dividen_combination
+		    56 Prepare	SELECT * FROM static_inplay_check_time_score
+		    56 Execute	SELECT * FROM static_inplay_check_time_score
+		    56 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    56 Execute	SELECT * FROM static_game_betting_type_mgr
+		    56 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    56 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    56 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    56 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    56 Prepare	SELECT * FROM static_market_family
+		    56 Execute	SELECT * FROM static_market_family
+		    56 Prepare	SELECT * FROM static_partner_front_rule_set
+		    56 Execute	SELECT * FROM static_partner_front_rule_set
+		    56 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    56 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    56 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    56 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    56 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    56 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:43:37	    56 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    56 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    56 Prepare	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = ?  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = ?
+		    56 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+240628 16:43:38	    56 Prepare	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = ?
+		    56 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    56 Prepare	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = ?
+		    56 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    56 Prepare	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Prepare	SELECT * FROM member_minigame_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Prepare	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Prepare	update member set last_login = now() where idx = ?
+		    56 Execute	update member set last_login = now() where idx = '38'
+240628 16:44:00	    56 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:44:14	     3 Quit	
+240628 16:44:21	    58 Connect	manager@192.168.100.123 on  using TCP/IP
+		    58 Query	SELECT CONNECTION_ID()
+		    58 Query	SHOW VARIABLES
+		    58 Query	SHOW /*!50002 GLOBAL */ STATUS
+		    58 Query	SELECT NOW()
+		    58 Query	SHOW TABLES FROM `information_schema`
+		    58 Query	SHOW DATABASES
+		    58 Query	SHOW OPEN TABLES FROM main WHERE `in_use`!=0
+		    58 Query	USE `main`
+		    58 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='main'
+		    58 Query	SHOW TABLE STATUS FROM `main`
+		    58 Query	SHOW FUNCTION STATUS WHERE `Db`='main'
+		    58 Query	SHOW PROCEDURE STATUS WHERE `Db`='main'
+		    58 Query	SHOW TRIGGERS FROM `main`
+		    58 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='main'
+240628 16:45:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:46:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:47:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:47:35	    58 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='sys'
+		    58 Query	SHOW TABLE STATUS FROM `sys`
+		    58 Query	SHOW FUNCTION STATUS WHERE `Db`='sys'
+		    58 Query	SHOW PROCEDURE STATUS WHERE `Db`='sys'
+		    58 Query	SHOW TRIGGERS FROM `sys`
+		    58 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='sys'
+240628 16:47:42	    58 Query	USE `mysql`
+		    58 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='mysql'
+		    58 Query	SHOW TABLE STATUS FROM `mysql`
+		    58 Query	SHOW FUNCTION STATUS WHERE `Db`='mysql'
+		    58 Query	SHOW PROCEDURE STATUS WHERE `Db`='mysql'
+		    58 Query	SHOW TRIGGERS FROM `mysql`
+		    58 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='mysql'
+240628 16:47:44	    58 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='mysql' AND TABLE_NAME='user' ORDER BY ORDINAL_POSITION
+		    58 Query	SHOW INDEXES FROM `user` FROM `mysql`
+		    58 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='mysql'   AND TABLE_NAME='user'   AND REFERENCED_TABLE_NAME IS NOT NULL
+		    58 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='mysql'   AND TABLE_NAME='user'   AND REFERENCED_TABLE_NAME IS NOT NULL
+		    58 Query	SELECT CURRENT_USER()
+		    58 Query	SHOW CREATE VIEW `mysql`.`user`
+		    58 Query	SELECT CAST(LOAD_FILE(CONCAT(IFNULL(@@GLOBAL.datadir, CONCAT(@@GLOBAL.basedir, 'data/')), 'mysql/user.frm')) AS CHAR CHARACTER SET utf8)
+240628 16:47:46	    58 Query	SELECT * FROM `mysql`.`user` LIMIT 1000
+240628 16:48:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:48:43	    58 Quit	
+240628 16:48:50	    59 Connect	manager@192.168.100.123 on  using TCP/IP
+		    59 Query	SELECT CONNECTION_ID()
+		    59 Query	SHOW VARIABLES
+		    59 Query	SHOW /*!50002 GLOBAL */ STATUS
+		    59 Query	SELECT NOW()
+		    59 Query	SHOW TABLES FROM `information_schema`
+		    59 Query	SHOW DATABASES
+		    59 Query	SHOW OPEN TABLES FROM mysql WHERE `in_use`!=0
+		    59 Query	USE `mysql`
+		    59 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='mysql'
+		    59 Query	SHOW TABLE STATUS FROM `mysql`
+		    59 Query	SHOW FUNCTION STATUS WHERE `Db`='mysql'
+		    59 Query	SHOW PROCEDURE STATUS WHERE `Db`='mysql'
+		    59 Query	SHOW TRIGGERS FROM `mysql`
+		    59 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='mysql'
+240628 16:49:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:50:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:51:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:51:04	    56 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    56 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+240628 16:51:05	    56 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    56 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    56 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	update member set last_login = now() where idx = '38'
+240628 16:51:49	    56 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    56 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+		    56 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    56 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    56 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    56 Execute	update member set last_login = now() where idx = '38'
+240628 16:52:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:52:25	    59 Query	USE `main`
+		    59 Query	SELECT `DEFAULT_COLLATION_NAME` FROM `information_schema`.`SCHEMATA` WHERE `SCHEMA_NAME`='main'
+		    59 Query	SHOW TABLE STATUS FROM `main`
+		    59 Query	SHOW FUNCTION STATUS WHERE `Db`='main'
+		    59 Query	SHOW PROCEDURE STATUS WHERE `Db`='main'
+		    59 Query	SHOW TRIGGERS FROM `main`
+		    59 Query	SELECT *, EVENT_SCHEMA AS `Db`, EVENT_NAME AS `Name` FROM information_schema.`EVENTS` WHERE `EVENT_SCHEMA`='main'
+240628 16:52:59	    59 Query	SELECT * FROM `information_schema`.`COLUMNS` WHERE TABLE_SCHEMA='main' AND TABLE_NAME='member_casino_slot_betting_info' ORDER BY ORDINAL_POSITION
+		    59 Query	SHOW INDEXES FROM `member_casino_slot_betting_info` FROM `main`
+		    59 Query	SELECT * FROM information_schema.REFERENTIAL_CONSTRAINTS WHERE   CONSTRAINT_SCHEMA='main'   AND TABLE_NAME='member_casino_slot_betting_info'   AND REFERENCED_TABLE_NAME IS NOT NULL
+		    59 Query	SELECT * FROM information_schema.KEY_COLUMN_USAGE WHERE   TABLE_SCHEMA='main'   AND TABLE_NAME='member_casino_slot_betting_info'   AND REFERENCED_TABLE_NAME IS NOT NULL
+		    59 Query	SHOW ENGINES
+		    59 Query	SHOW COLLATION
+		    59 Query	SHOW CREATE TABLE `main`.`member_casino_slot_betting_info`
+		    59 Query	SELECT CONSTRAINT_NAME, CHECK_CLAUSE FROM `information_schema`.`CHECK_CONSTRAINTS` WHERE CONSTRAINT_SCHEMA='main' AND TABLE_NAME='member_casino_slot_betting_info'
+240628 16:53:00	    56 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:53:31	    59 Query	SELECT  `u_key`,  `pkey`,  `member_idx`,  `head_office_idx`,  `settlement`,  `trx_id`,  `round_id`,  `bet_money`,  `take_money`,  `hold_money`,  `game_id`,  `product_id`,  `product_type_id`,  `provider_id`,  `product_group_id`,  `bonus_type`, LEFT(`callback_info`, 256),  `create_dt`,  `calc_dt` FROM `main`.`member_casino_slot_betting_info` LIMIT 1000
+240628 16:53:32	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2a80ef26d4b72d5de46fd66e7b7a049f' AND `pkey`='27'
+240628 16:53:34	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='396eacf467c727930634ea7a38f5ced8' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='4587279b099deb7ba13179e34e7b3e5f' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='5f115bc46d2e6b684f6f299b50b98608' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='af36ec14f103685835235cd4ccd79592' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='e0bfcb697491fac5c9c0942765f98f64' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='00367f995c064e7dd72d4484216904ed' AND `pkey`='28'
+240628 16:53:39	    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='00367f995c064e7dd72d4484216904ed' AND `pkey`='28'
+240628 16:53:48	    60 Connect	manager@172.19.0.1 on main using TCP/IP
+		    60 Prepare	SELECT * FROM static_product_id_manager
+		    60 Execute	SELECT * FROM static_product_id_manager
+		    60 Prepare	SELECT * FROM static_game_id_manager
+		    60 Execute	SELECT * FROM static_game_id_manager
+		    60 Prepare	SELECT * FROM static_product_group_manager
+		    60 Execute	SELECT * FROM static_product_group_manager
+		    60 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    60 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    61 Connect	manager@172.19.0.1 on main using TCP/IP
+		    62 Connect	manager@172.19.0.1 on main using TCP/IP
+		    64 Connect	manager@172.19.0.1 on main using TCP/IP
+		    65 Connect	manager@172.19.0.1 on main using TCP/IP
+		    63 Connect	manager@172.19.0.1 on main using TCP/IP
+		    61 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    64 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    62 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    65 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    63 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    61 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    64 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    65 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    63 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    62 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    63 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    63 Execute	SELECT * FROM `main`.`lsports_sports`
+		    63 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    63 Execute	SELECT * FROM `main`.`lsports_locations`
+		    63 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    63 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:53:55	    63 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:53:56	    63 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:53:58	    63 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:53:59	    63 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:54:00	    63 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+240628 16:54:01	    63 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    64 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    63 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+240628 16:54:02	    63 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    64 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:54:03	    63 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    63 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    63 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    63 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    63 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    63 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    63 Prepare	SELECT * FROM static_dividen_combination
+		    63 Execute	SELECT * FROM static_dividen_combination
+		    63 Prepare	SELECT * FROM static_inplay_check_time_score
+		    63 Execute	SELECT * FROM static_inplay_check_time_score
+		    63 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    63 Execute	SELECT * FROM static_game_betting_type_mgr
+		    63 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    63 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    63 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    63 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    63 Prepare	SELECT * FROM static_market_family
+		    63 Execute	SELECT * FROM static_market_family
+		    63 Prepare	SELECT * FROM static_partner_front_rule_set
+		    63 Execute	SELECT * FROM static_partner_front_rule_set
+		    63 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    63 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    63 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    63 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    63 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    63 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:54:15	    66 Connect	manager@172.19.0.1 on main using TCP/IP
+		    66 Prepare	SELECT * FROM static_product_id_manager
+		    66 Execute	SELECT * FROM static_product_id_manager
+		    66 Prepare	SELECT * FROM static_game_id_manager
+		    66 Execute	SELECT * FROM static_game_id_manager
+		    66 Prepare	SELECT * FROM static_product_group_manager
+		    66 Execute	SELECT * FROM static_product_group_manager
+		    66 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    71 Connect	manager@172.19.0.1 on main using TCP/IP
+		    70 Connect	manager@172.19.0.1 on main using TCP/IP
+		    68 Connect	manager@172.19.0.1 on main using TCP/IP
+		    67 Connect	manager@172.19.0.1 on main using TCP/IP
+		    69 Connect	manager@172.19.0.1 on main using TCP/IP
+		    66 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    71 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    70 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    68 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    67 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    69 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    71 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    68 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    67 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    70 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    69 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+240628 16:54:16	    68 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    68 Execute	SELECT * FROM `main`.`lsports_sports`
+		    68 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    68 Execute	SELECT * FROM `main`.`lsports_locations`
+		    68 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    68 Execute	SELECT * FROM `main`.`lsports_leagues`
+		    68 Prepare	SELECT * FROM `main`.`lsports_participant`
+		    68 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:54:18	    68 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:54:19	    68 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:54:20	    68 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    68 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    68 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    68 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    68 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    68 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    68 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    68 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    68 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    68 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    68 Prepare	SELECT * FROM static_dividen_combination
+		    68 Execute	SELECT * FROM static_dividen_combination
+		    68 Prepare	SELECT * FROM static_inplay_check_time_score
+		    68 Execute	SELECT * FROM static_inplay_check_time_score
+		    68 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    68 Execute	SELECT * FROM static_game_betting_type_mgr
+		    68 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    68 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    68 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    68 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    68 Prepare	SELECT * FROM static_market_family
+		    68 Execute	SELECT * FROM static_market_family
+		    68 Prepare	SELECT * FROM static_partner_front_rule_set
+		    68 Execute	SELECT * FROM static_partner_front_rule_set
+		    68 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    68 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    68 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    68 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    68 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    68 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:54:23	    68 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    68 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    68 Prepare	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = ?  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = ?
+		    68 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+240628 16:54:24	    68 Prepare	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = ?
+240628 16:54:25	    68 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+		    68 Prepare	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = ?
+		    68 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    68 Prepare	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    68 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    68 Prepare	SELECT * FROM member_minigame_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    68 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    68 Prepare	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    68 Execute	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    68 Prepare	update member set last_login = now() where idx = ?
+		    68 Execute	update member set last_login = now() where idx = '38'
+240628 16:54:32	    68 Query	START TRANSACTION
+		    68 Query	update member set money = money - 180 where idx = 38
+		    68 Query	insert into member_casino_slot_betting_info(u_key,pkey,member_idx,head_office_idx,settlement,trx_id,round_id,bet_money,hold_money,game_id,product_id,product_type_id,provider_id,product_group_id,callback_info,create_dt,calc_dt) values ('681c10f2f501dfb12214a24566745ab4', '28', 38, 2, 0, 1230604662,'943150923004626622',180, 83600, '1', 3, 2, 4, 100, '[{\"ukey\":\"681c10f2f501dfb12214a24566745ab4\",\"callback_type\":\"bet\",\"trx_id\":1230604662,\"refererId\":0,\"amount\":180,\"payload\":{\"transactionId\":1230604662,\"refererId\":0,\"transactionType\":\"BET\",\"username\":\"goodgaming38\",\"amount\":180,\"vendorCode\":\"CQ9\",\"vendorName\":\"CQ9\",\"vendorTransactionId\":\"943150923004626663\",\"gameType\":\"SLOT\",\"gameCode\":\"1\",\"gameTitle\":\"Fruit King\",\"gameRound\":\"943150923004626622\",\"details\":{\"opkey\":\"25f6e387e986cf7a1c4a8a6df2dd1594\",\"walletLoginId\":\"ppb182e321756c4a\",\"token\":\"017349426aee4797b776cfe9a504022e\",\"vendorCode\":\"4\",\"vendorName\":\"CQ9\",\"gameType\":\"slot\",\"gameCode\":\"1\",\"gameRound\":\"943150923004626622\",\"amount\":180,\"vendorTransactionId\":\"943150923004626663\",\"createdAt\":\"2024-06-28 11:46:46.648\"},\"betAt\":\"2024-06-28T02:46:46.648\"}}]', '2024-06-28 16-54-32', '2024-06-28 16-54-32' )
+		    68 Query	COMMIT
+240628 16:54:42	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='011543c66dee0323699538bfa193bc91' AND `pkey`='28'
+240628 16:54:43	    59 Query	SELECT  `u_key`,  `pkey`,  `member_idx`,  `head_office_idx`,  `settlement`,  `trx_id`,  `round_id`,  `bet_money`,  `take_money`,  `hold_money`,  `game_id`,  `product_id`,  `product_type_id`,  `provider_id`,  `product_group_id`,  `bonus_type`, LEFT(`callback_info`, 256),  `create_dt`,  `calc_dt` FROM `main`.`member_casino_slot_betting_info` LIMIT 1000
+240628 16:54:54	    68 Query	START TRANSACTION
+		    68 Query	update member set money = money + 200 where idx = 38
+		    68 Query	update member_casino_slot_betting_info set settlement = 2,take_money = 200,hold_money = 83800,calc_dt = '2024-06-28 16-54-54',callback_info = '[{\"ukey\":\"681c10f2f501dfb12214a24566745ab4\",\"callback_type\":\"bet\",\"trx_id\":1230604662,\"refererId\":0,\"amount\":180,\"payload\":{\"transactionId\":1230604662,\"refererId\":0,\"transactionType\":\"BET\",\"username\":\"goodgaming38\",\"amount\":180,\"vendorCode\":\"CQ9\",\"vendorName\":\"CQ9\",\"vendorTransactionId\":\"943150923004626663\",\"gameType\":\"SLOT\",\"gameCode\":\"1\",\"gameTitle\":\"Fruit King\",\"gameRound\":\"943150923004626622\",\"details\":{\"opkey\":\"25f6e387e986cf7a1c4a8a6df2dd1594\",\"walletLoginId\":\"ppb182e321756c4a\",\"token\":\"017349426aee4797b776cfe9a504022e\",\"vendorCode\":\"4\",\"vendorName\":\"CQ9\",\"gameType\":\"slot\",\"gameCode\":\"1\",\"gameRound\":\"943150923004626622\",\"amount\":180,\"vendorTransactionId\":\"943150923004626663\",\"createdAt\":\"2024-06-28 11:46:46.648\"},\"betAt\":\"2024-06-28T02:46:46.648\"}},{\"ukey\":\"681c10f2f501dfb12214a24566745ab4\",\"callback_type\":\"result\",\"trx_id\":1230604777,\"refererId\":1230604662,\"amount\":200,\"payload\":{\"transactionId\":1230604777,\"refererId\":1230604662,\"transactionType\":\"WIN\",\"username\":\"goodgaming38\",\"amount\":200,\"vendorCode\":\"CQ9\",\"vendorName\":\"CQ9\",\"vendorTransactionId\":\"943170923305897222\",\"gameType\":\"SLOT\",\"gameCode\":\"1\",\"gameTitle\":\"Fruit King\",\"gameRound\":\"943150923004626622\",\"details\":{\"opkey\":\"25f6e387e986cf7a1c4a8a6df2dd1594\",\"walletLoginId\":\"ppb182e321756c4a\",\"token\":\"63c0226711294d6fbb40b2371335965c\",\"vendorCode\":\"4\",\"vendorName\":\"CQ9\",\"gameType\":\"slot\",\"gameCode\":\"1\",\"gameRound\":\"943150923004626622\",\"amount\":200,\"vendorTransactionId\":\"943170923305897222\",\"createdAt\":\"2024-06-28T00:00:00.000Z\"},\"betAt\":\"2024-06-28T00:00:00.000Z\"}}]' where u_key = '681c10f2f501dfb12214a24566745ab4' and pkey = '28'
+		    68 Query	COMMIT
+240628 16:54:55	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2a80ef26d4b72d5de46fd66e7b7a049f' AND `pkey`='27'
+240628 16:54:57	    59 Query	SELECT  `u_key`,  `pkey`,  `member_idx`,  `head_office_idx`,  `settlement`,  `trx_id`,  `round_id`,  `bet_money`,  `take_money`,  `hold_money`,  `game_id`,  `product_id`,  `product_type_id`,  `provider_id`,  `product_group_id`,  `bonus_type`, LEFT(`callback_info`, 256),  `create_dt`,  `calc_dt` FROM `main`.`member_casino_slot_betting_info` LIMIT 1000
+240628 16:55:00	    68 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    68 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:55:11	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='15af9b3bf2e21a5cf843c397f8e3f2cd' AND `pkey`='28'
+240628 16:55:12	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2a80ef26d4b72d5de46fd66e7b7a049f' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='396eacf467c727930634ea7a38f5ced8' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='4587279b099deb7ba13179e34e7b3e5f' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='5f115bc46d2e6b684f6f299b50b98608' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='af36ec14f103685835235cd4ccd79592' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='e0bfcb697491fac5c9c0942765f98f64' AND `pkey`='27'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='011543c66dee0323699538bfa193bc91' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='0e3c55d807ca1536dd7008b841cad552' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='0e484fad5466e0b0a5bac6e2ea237e39' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='196123643174e524c0d2be79237170c5' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2dda511f2ff55dcf07fd8eed195de04e' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2f0a22ed4d8349f16634d4a40cd35839' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2fbf613f59fda9639aed37fc92da9256' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='346da7c90b72968b5b0f6fefc9729f59' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='3bcbaf7b80ac940fa1e53bbaa13bd164' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='46edb576e3ecd80c62c797a870eb4637' AND `pkey`='28'
+240628 16:55:13	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='5abc56a91786f7e659d7e888e897acee' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='64ff007daba4ef1ddd8983773373447b' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='681c10f2f501dfb12214a24566745ab4' AND `pkey`='28'
+240628 16:55:19	    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='681c10f2f501dfb12214a24566745ab4' AND `pkey`='28'
+240628 16:55:24	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='6bd8ad0eb37d001747fe5f89d4eaca83' AND `pkey`='28'
+240628 16:55:32	    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='6c59391deb8551728e94436ad9c382a4' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='6fe422b4ff8a2a38026015f42750b492' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='75b6ddce3218c48f1f9501f18b04af53' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='7caf067c8c5040be8a0ad53dc859c738' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='875ce47b3112a2d52db1489476fcac4f' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='8ae513924e6f76dcd93ee1df8f7a168e' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='8ccd3ff73f328589da3c3c90065f8b53' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='8e39315118a5192364e004a366231135' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='917081dcfe73bec071654ab949e487e2' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='917c82d2b730bec0f44a121fd7d5efca' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='9bbab1ae470641adfad6cb3c44f623da' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='aef2063917651406502f693ca4ce13a4' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b0feebd4640dd511f32322183a0caa72' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b1ecf9e48d2fcf6eda1486cf23e152b1' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b205a2aaaa2f0a4fc5a4856a602ee1f3' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b73b19dd0919dea561821c1e3a2ec950' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='bb9822a5fc41c4e6f98c105651a91dec' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='bc7e4040a9a4d66ef8b0380e32c9e20c' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c0de04fda1e94c17187922450acfe137' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c636c731bf94785778533ed6d0854932' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c940a656911cd54c6a64ca3b028d133a' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='cfc5d895d216beba9cac600ec5ba9e60' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='d5fab59aa3e24906716a00804ffcbfc7' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='d9d14d153d9ee85bd7602a0d327d690d' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='da69760322bfc356b10c6648cf5a1af8' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='dafbbe4170dc581fbb5b5c38b72cd708' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='fa2f9de2f20356bc3799e8c9cdf89f94' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='fd4c578226011af03854a8c6d01ff2e0' AND `pkey`='28'
+		    59 Query	SELECT `u_key`, `pkey`, `member_idx`, `head_office_idx`, `settlement`, `trx_id`, `round_id`, `bet_money`, `take_money`, `hold_money`, `game_id`, `product_id`, `product_type_id`, `provider_id`, `product_group_id`, `bonus_type`, `callback_info`, `create_dt`, `calc_dt` FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='fec82129c522dc6ee43a4bc7a151df6b' AND `pkey`='28'
+240628 16:55:41	    72 Connect	manager@172.19.0.1 on main using TCP/IP
+		    72 Prepare	SELECT * FROM static_product_id_manager
+		    72 Execute	SELECT * FROM static_product_id_manager
+		    72 Prepare	SELECT * FROM static_game_id_manager
+		    72 Execute	SELECT * FROM static_game_id_manager
+		    72 Prepare	SELECT * FROM static_product_group_manager
+		    72 Execute	SELECT * FROM static_product_group_manager
+		    72 Prepare	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    72 Execute	SELECT * FROM main.mini_game WHERE game = 'powerball' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    73 Connect	manager@172.19.0.1 on main using TCP/IP
+		    74 Connect	manager@172.19.0.1 on main using TCP/IP
+		    75 Connect	manager@172.19.0.1 on main using TCP/IP
+		    76 Connect	manager@172.19.0.1 on main using TCP/IP
+		    73 Prepare	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    74 Prepare	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    75 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    73 Execute	SELECT * FROM main.mini_game WHERE game = 'pladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    74 Execute	SELECT * FROM main.mini_game WHERE game = 'kladder' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    75 Execute	SELECT * FROM main.mini_game WHERE game = 'b_soccer' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    76 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    77 Connect	manager@172.19.0.1 on main using TCP/IP
+		    76 Execute	SELECT * FROM main.mini_game WHERE game = 'b_horse' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    77 Prepare	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    77 Execute	SELECT * FROM main.mini_game WHERE game = 'b_dog' AND sdate NOT LIKE '%T%' ORDER BY sdate DESC LIMIT 500
+		    75 Prepare	SELECT * FROM `main`.`lsports_sports`
+		    75 Execute	SELECT * FROM `main`.`lsports_sports`
+		    75 Prepare	SELECT * FROM `main`.`lsports_locations`
+		    75 Execute	SELECT * FROM `main`.`lsports_locations`
+		    75 Prepare	SELECT * FROM `main`.`lsports_leagues`
+		    75 Execute	SELECT * FROM `main`.`lsports_leagues`
+240628 16:55:47	    75 Prepare	SELECT * FROM `main`.`lsports_participant`
+240628 16:55:48	    75 Execute	SELECT * FROM `main`.`lsports_participant`
+240628 16:55:50	    75 Prepare	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:55:51	    75 Execute	SELECT * FROM `main`.`lsports_bookmaker`
+240628 16:55:52	    75 Prepare	SELECT * FROM `main`.`lsports_static_markets`
+		    75 Execute	SELECT * FROM `main`.`lsports_static_markets`
+		    75 Prepare	SELECT * FROM `main`.`static_head_office_markets`
+		    75 Execute	SELECT * FROM `main`.`static_head_office_markets`
+		    75 Prepare	SELECT * FROM `main`.`lsports_magin_range`
+		    75 Execute	SELECT * FROM `main`.`lsports_magin_range`
+		    75 Prepare	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    75 Execute	SELECT * FROM `main`.`lsports_refund_rate_market`
+		    75 Prepare	SELECT * FROM static_main_server_mgr where number = ?
+		    75 Execute	SELECT * FROM static_main_server_mgr where number = '1'
+		    75 Prepare	SELECT * FROM static_dividen_combination
+		    75 Execute	SELECT * FROM static_dividen_combination
+		    75 Prepare	SELECT * FROM static_inplay_check_time_score
+		    75 Execute	SELECT * FROM static_inplay_check_time_score
+		    75 Prepare	SELECT * FROM static_game_betting_type_mgr
+		    75 Execute	SELECT * FROM static_game_betting_type_mgr
+		    75 Prepare	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    75 Execute	SELECT partner_idx,`rank`,`type`,`level`,amount FROM static_dividend_policy
+		    75 Prepare	SELECT * FROM static_min_max_limit_win_betting_money
+		    75 Execute	SELECT * FROM static_min_max_limit_win_betting_money
+		    75 Prepare	SELECT * FROM static_market_family
+		    75 Execute	SELECT * FROM static_market_family
+		    75 Prepare	SELECT * FROM static_partner_front_rule_set
+		    75 Execute	SELECT * FROM static_partner_front_rule_set
+		    75 Prepare	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    75 Execute	select * from statistic_fixtures where partner_idx in (2,17,18,40,67)
+		    75 Prepare	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    75 Execute	select * from statistic_casino_group where partner_idx in (2,17,18,40,67)
+		    75 Prepare	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+		    75 Execute	select * from statistic_casino_slot where partner_idx in (2,17,18,40,67)
+240628 16:56:00	    75 Prepare	SELECT * FROM member_minigame_betting_info WHERE settlement = ?
+		    75 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:56:24	    75 Prepare	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    75 Execute	SELECT member_domain.partner_idx,static_partner_front_rule_set.rule_data FROM member_domain left join static_partner_front_rule_set on member_domain.partner_idx = static_partner_front_rule_set.partner_idx left join member on member.idx = member_domain.partner_idx WHERE member.partner_type = 201 and member_domain.domain like '%192.168.100.144%'
+		    75 Prepare	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = ?  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = ?
+		    75 Execute	WITH RECURSIVE TEMP AS (SELECT member.idx,member.id,member.nick_name,member.partner_type,member.parent_partner_idx,member.recommend_idx,member.password,member.money,member.point,member.hp,member.level,member.status,member.coupon, 1 as lvl FROM member WHERE parent_partner_idx = 2  UNION ALL SELECT A.idx,A.id,A.nick_name,A.partner_type,A.parent_partner_idx,A.recommend_idx,A.password,A.money,A.point,A.hp,A.level,A.status,A.coupon,lvl + 1 lvl FROM member A INNER JOIN TEMP B ON A.parent_partner_idx = B.idx) SELECT idx,id,nick_name,password,nick_name,money,point,coupon,hp,level,parent_partner_idx,recommend_idx,status FROM TEMP where id = 'ttest7'
+240628 16:56:25	    75 Prepare	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = ?
+240628 16:56:26	    75 Execute	SELECT id,name,status,game_type,forder_type FROM member_game_betting_type_info WHERE member_idx = '38'
+240628 16:56:27	    75 Prepare	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = ?
+		    75 Execute	SELECT fixture_id,game_type,sum_bet_money FROM member_fixtures_bet_sum WHERE member_idx = '38'
+		    75 Prepare	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    75 Execute	SELECT u_key,member_idx,game_type,game_sub_type,settlement,bonus_price,total_bet_money,hold_money,take_money,detail_info,is_view_status,calculate_dt,create_dt FROM member_toto_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    75 Prepare	SELECT * FROM member_minigame_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    75 Execute	SELECT * FROM member_minigame_betting_info WHERE member_idx = 38 and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    75 Prepare	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = ? and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    75 Execute	SELECT * FROM member_casino_slot_betting_info WHERE member_idx = '38' and create_dt >= date_sub(NOW(),interval 3 month) order by create_dt desc
+		    75 Prepare	update member set last_login = now() where idx = ?
+		    75 Execute	update member set last_login = now() where idx = '38'
+240628 16:56:34	    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2a80ef26d4b72d5de46fd66e7b7a049f' AND `pkey`='27'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='396eacf467c727930634ea7a38f5ced8' AND `pkey`='27'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='4587279b099deb7ba13179e34e7b3e5f' AND `pkey`='27'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='5f115bc46d2e6b684f6f299b50b98608' AND `pkey`='27'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='af36ec14f103685835235cd4ccd79592' AND `pkey`='27'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='e0bfcb697491fac5c9c0942765f98f64' AND `pkey`='27'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='011543c66dee0323699538bfa193bc91' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='0e3c55d807ca1536dd7008b841cad552' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='0e484fad5466e0b0a5bac6e2ea237e39' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='15af9b3bf2e21a5cf843c397f8e3f2cd' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='196123643174e524c0d2be79237170c5' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2dda511f2ff55dcf07fd8eed195de04e' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2f0a22ed4d8349f16634d4a40cd35839' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='2fbf613f59fda9639aed37fc92da9256' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='346da7c90b72968b5b0f6fefc9729f59' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='3bcbaf7b80ac940fa1e53bbaa13bd164' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='46edb576e3ecd80c62c797a870eb4637' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='5abc56a91786f7e659d7e888e897acee' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='64ff007daba4ef1ddd8983773373447b' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='6bd8ad0eb37d001747fe5f89d4eaca83' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='6c59391deb8551728e94436ad9c382a4' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='6fe422b4ff8a2a38026015f42750b492' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='75b6ddce3218c48f1f9501f18b04af53' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='7caf067c8c5040be8a0ad53dc859c738' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='875ce47b3112a2d52db1489476fcac4f' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='8ae513924e6f76dcd93ee1df8f7a168e' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='8ccd3ff73f328589da3c3c90065f8b53' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='8e39315118a5192364e004a366231135' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='917081dcfe73bec071654ab949e487e2' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='917c82d2b730bec0f44a121fd7d5efca' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='9bbab1ae470641adfad6cb3c44f623da' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='aef2063917651406502f693ca4ce13a4' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b0feebd4640dd511f32322183a0caa72' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b1ecf9e48d2fcf6eda1486cf23e152b1' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b205a2aaaa2f0a4fc5a4856a602ee1f3' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='b73b19dd0919dea561821c1e3a2ec950' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='bb9822a5fc41c4e6f98c105651a91dec' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='bc7e4040a9a4d66ef8b0380e32c9e20c' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c0de04fda1e94c17187922450acfe137' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c636c731bf94785778533ed6d0854932' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c940a656911cd54c6a64ca3b028d133a' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='cfc5d895d216beba9cac600ec5ba9e60' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='d5fab59aa3e24906716a00804ffcbfc7' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='d9d14d153d9ee85bd7602a0d327d690d' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='da69760322bfc356b10c6648cf5a1af8' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='dafbbe4170dc581fbb5b5c38b72cd708' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='fa2f9de2f20356bc3799e8c9cdf89f94' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='fd4c578226011af03854a8c6d01ff2e0' AND `pkey`='28'
+		    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='fec82129c522dc6ee43a4bc7a151df6b' AND `pkey`='28'
+240628 16:56:43	    75 Query	START TRANSACTION
+		    75 Query	update member set money = money - 180 where idx = 38
+		    75 Query	insert into member_casino_slot_betting_info(u_key,pkey,member_idx,head_office_idx,settlement,trx_id,round_id,bet_money,hold_money,game_id,product_id,product_type_id,provider_id,product_group_id,callback_info,create_dt,calc_dt) values ('c667fb571ed215c20f1f1e8d822d2559', '28', 38, 2, 0, 1230604662,'943150923004626622',180, 83620, '1', 3, 2, 4, 100, '[{\"ukey\":\"c667fb571ed215c20f1f1e8d822d2559\",\"callback_type\":\"bet\",\"trx_id\":1230604662,\"refererId\":0,\"amount\":180,\"payload\":{\"transactionId\":1230604662,\"refererId\":0,\"transactionType\":\"BET\",\"username\":\"goodgaming38\",\"amount\":180,\"vendorCode\":\"CQ9\",\"vendorName\":\"CQ9\",\"vendorTransactionId\":\"943150923004626663\",\"gameType\":\"SLOT\",\"gameCode\":\"1\",\"gameTitle\":\"Fruit King\",\"gameRound\":\"943150923004626622\",\"details\":{\"opkey\":\"25f6e387e986cf7a1c4a8a6df2dd1594\",\"walletLoginId\":\"ppb182e321756c4a\",\"token\":\"017349426aee4797b776cfe9a504022e\",\"vendorCode\":\"4\",\"vendorName\":\"CQ9\",\"gameType\":\"slot\",\"gameCode\":\"1\",\"gameRound\":\"943150923004626622\",\"amount\":180,\"vendorTransactionId\":\"943150923004626663\",\"createdAt\":\"2024-06-28 11:46:46.648\"},\"betAt\":\"2024-06-28T02:46:46.648\"}}]', '2024-06-28 16-56-43', '2024-06-28 16-56-43' )
+		    75 Query	COMMIT
+240628 16:56:45	    59 Query	SELECT  `u_key`,  `pkey`,  `member_idx`,  `head_office_idx`,  `settlement`,  `trx_id`,  `round_id`,  `bet_money`,  `take_money`,  `hold_money`,  `game_id`,  `product_id`,  `product_type_id`,  `provider_id`,  `product_group_id`,  `bonus_type`, LEFT(`callback_info`, 256),  `create_dt`,  `calc_dt` FROM `main`.`member_casino_slot_betting_info` LIMIT 1000
+240628 16:56:56	    75 Query	START TRANSACTION
+		    75 Query	update member set money = money + 180 where idx = 38
+		    75 Query	update member_casino_slot_betting_info set settlement = -1,take_money = 180,hold_money = 83980,calc_dt = '2024-06-28 16-56-56',callback_info = '[{\"ukey\":\"c667fb571ed215c20f1f1e8d822d2559\",\"callback_type\":\"bet\",\"trx_id\":1230604662,\"refererId\":0,\"amount\":180,\"payload\":{\"transactionId\":1230604662,\"refererId\":0,\"transactionType\":\"BET\",\"username\":\"goodgaming38\",\"amount\":180,\"vendorCode\":\"CQ9\",\"vendorName\":\"CQ9\",\"vendorTransactionId\":\"943150923004626663\",\"gameType\":\"SLOT\",\"gameCode\":\"1\",\"gameTitle\":\"Fruit King\",\"gameRound\":\"943150923004626622\",\"details\":{\"opkey\":\"25f6e387e986cf7a1c4a8a6df2dd1594\",\"walletLoginId\":\"ppb182e321756c4a\",\"token\":\"017349426aee4797b776cfe9a504022e\",\"vendorCode\":\"4\",\"vendorName\":\"CQ9\",\"gameType\":\"slot\",\"gameCode\":\"1\",\"gameRound\":\"943150923004626622\",\"amount\":180,\"vendorTransactionId\":\"943150923004626663\",\"createdAt\":\"2024-06-28 11:46:46.648\"},\"betAt\":\"2024-06-28T02:46:46.648\"}},{\"ukey\":\"c667fb571ed215c20f1f1e8d822d2559\",\"callback_type\":\"result\",\"trx_id\":1230604777,\"refererId\":1230604662,\"amount\":180,\"payload\":{\"transactionId\":1230604777,\"refererId\":1230604662,\"transactionType\":\"CANCEL\",\"username\":\"goodgaming38\",\"amount\":180,\"vendorCode\":\"CQ9\",\"vendorName\":\"CQ9\",\"vendorTransactionId\":\"943170923305897222\",\"gameType\":\"SLOT\",\"gameCode\":\"1\",\"gameTitle\":\"Fruit King\",\"gameRound\":\"943150923004626622\",\"details\":{\"opkey\":\"25f6e387e986cf7a1c4a8a6df2dd1594\",\"walletLoginId\":\"ppb182e321756c4a\",\"token\":\"63c0226711294d6fbb40b2371335965c\",\"vendorCode\":\"4\",\"vendorName\":\"CQ9\",\"gameType\":\"slot\",\"gameCode\":\"1\",\"gameRound\":\"943150923004626622\",\"amount\":180,\"vendorTransactionId\":\"943170923305897222\",\"createdAt\":\"2024-06-28T00:00:00.000Z\"},\"betAt\":\"2024-06-28T00:00:00.000Z\"}}]' where u_key = 'c667fb571ed215c20f1f1e8d822d2559' and pkey = '28'
+		    75 Query	COMMIT
+240628 16:56:59	    59 Query	SELECT  `u_key`,  `pkey`,  `member_idx`,  `head_office_idx`,  `settlement`,  `trx_id`,  `round_id`,  `bet_money`,  `take_money`,  `hold_money`,  `game_id`,  `product_id`,  `product_type_id`,  `provider_id`,  `product_group_id`,  `bonus_type`, LEFT(`callback_info`, 256),  `create_dt`,  `calc_dt` FROM `main`.`member_casino_slot_betting_info` LIMIT 1000
+240628 16:57:00	    75 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
+240628 16:57:25	    59 Query	DELETE FROM `main`.`member_casino_slot_betting_info` WHERE  `u_key`='c667fb571ed215c20f1f1e8d822d2559' AND `pkey`='28'
+240628 16:58:00	    75 Execute	SELECT * FROM member_minigame_betting_info WHERE settlement = 0
